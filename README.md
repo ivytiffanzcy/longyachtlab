@@ -1,4 +1,4 @@
-# correlator-e89135
+# correlator-edf372
 
 A Python correlator utility.
 
